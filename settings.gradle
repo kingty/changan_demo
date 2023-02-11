@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Demo"
+include ':app'
+include ':base'
+include ':module-phonelist'
+include ':module-favorites'
+include ':module-main'
+include ':module-base'
+include ':common-lib:lib-network'
+include ':common-lib:lib-customview'
+include ':common-lib:lib-util'
+include ':common-lib:lib-monitor'
+include ':common-lib:lib-log'

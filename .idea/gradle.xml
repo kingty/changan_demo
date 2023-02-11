@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/common-lib" />
+            <option value="$PROJECT_DIR$/common-lib/lib-customview" />
+            <option value="$PROJECT_DIR$/common-lib/lib-log" />
+            <option value="$PROJECT_DIR$/common-lib/lib-monitor" />
+            <option value="$PROJECT_DIR$/common-lib/lib-network" />
+            <option value="$PROJECT_DIR$/common-lib/lib-util" />
+            <option value="$PROJECT_DIR$/module-base" />
+            <option value="$PROJECT_DIR$/module-favorites" />
+            <option value="$PROJECT_DIR$/module-main" />
+            <option value="$PROJECT_DIR$/module-phonelist" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

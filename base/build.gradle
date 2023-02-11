@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk versions.android_compile_sdk
+
+    defaultConfig {
+        minSdk versions.android_min_sdk
+        targetSdk versions.android_compile_sdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME": project.getName())
+            }
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation libs.core_ktx
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.junit_ext
+    androidTestImplementation libs.espresso
+
+
+    api libs.rxkotlin
+    api libs.rxandroid
+    api libs.arouter
+    kapt libs.arouter_compile
+    //这类基础库是整个公司所有app矩阵可以复用的库
+    //:common-lib下的基础可以在生产过程中都是可以单独作为仓库维护并上传maven，这里引用应该是引用maven库
+    //这里demo为了方便都放在common-lib文件下
+    //这里根据需要引入:common-lib下的基础库
+    api project(':common-lib:lib-network')
+    api project(':common-lib:lib-util')
+    api project(':common-lib:lib-customview')
+}
