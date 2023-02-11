@@ -1,10 +1,10 @@
-package com.changan.module_phonelist
+package com.changan.module_phonelist.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.changan.module_base.PATH_LIST_ACT
-import com.changan.module_phonelist.ui.main.PhoneListFragment
+import com.changan.module_phonelist.R
 
 @Route(path = PATH_LIST_ACT)
 class PhoneListActivity : AppCompatActivity() {

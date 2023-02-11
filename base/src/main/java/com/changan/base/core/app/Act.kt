@@ -1,17 +1,15 @@
 package com.tantan.build.ui.app
 
-import android.content.Context
 import android.os.Bundle
 import androidx.annotation.CallSuper
 import androidx.annotation.CheckResult
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import com.changan.base.R
 import com.changan.base.core.lifecycle.ActivityEvent
 import com.changan.base.core.lifecycle.LifecycleProvider
 import com.changan.base.core.lifecycle.LifecycleTransformer
 import com.changan.base.core.lifecycle.RxLifecycle
+import com.changan.base.core.verifyMainThread
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
