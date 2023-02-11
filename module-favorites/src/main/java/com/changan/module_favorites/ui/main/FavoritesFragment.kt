@@ -30,9 +30,6 @@ class FavoritesFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(FavoritesViewModel::class.java)
         // TODO: Use the ViewModel
 
-//        ServiceProvider.favoritesService?.toString()?.let { Log.d("xxxxxx", it) }
-//        ServiceProvider.listService?.toString()?.let { Log.d("xxxxxx", it) }
-//        ServiceProvider.mainService?.toString()?.let { Log.d("xxxxxx", it) }
     }
 
 }

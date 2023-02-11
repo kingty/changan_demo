@@ -54,6 +54,11 @@ dependencies {
     api libs.rxandroid
     api libs.arouter
     kapt libs.arouter_compile
+
+    api libs.retrofit
+    api libs.retrofit_rxjava
+    api libs.retrofit_converter
+
     //这类基础库是整个公司所有app矩阵可以复用的库
     //:common-lib下的基础可以在生产过程中都是可以单独作为仓库维护并上传maven，这里引用应该是引用maven库
     //这里demo为了方便都放在common-lib文件下

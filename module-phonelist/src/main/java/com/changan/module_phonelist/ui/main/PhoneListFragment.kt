@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.changan.module_phonelist.R
+import kotlinx.android.synthetic.main.fragment_phone_list.*
 
 class PhoneListFragment : Fragment() {
 
@@ -26,7 +28,15 @@ class PhoneListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(PhoneListViewModel::class.java)
-        // TODO: Use the ViewModel
+        recycler.layoutManager = LinearLayoutManager(context)
+        val adapter = ItemAdapter(requireContext())
+        recycler.adapter = adapter
+        viewModel.items.observe(viewLifecycleOwner) {
+            adapter.setData(it)
+        }
+        viewModel.refreshItems()
+
+
     }
 
 }
