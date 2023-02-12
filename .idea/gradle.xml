@@ -18,6 +18,8 @@
             <option value="$PROJECT_DIR$/common-lib/lib-monitor" />
             <option value="$PROJECT_DIR$/common-lib/lib-network" />
             <option value="$PROJECT_DIR$/common-lib/lib-util" />
+            <option value="$PROJECT_DIR$/lib-a" />
+            <option value="$PROJECT_DIR$/lib-b" />
             <option value="$PROJECT_DIR$/module-base" />
             <option value="$PROJECT_DIR$/module-favorites" />
             <option value="$PROJECT_DIR$/module-main" />
