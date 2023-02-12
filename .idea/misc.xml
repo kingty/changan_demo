@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.223731884057971" />
+        <entry key="module-favorites/src/main/res/layout/activity_tangram.xml" value="0.246875" />
+        <entry key="module-favorites/src/main/res/layout/fragment_favorites.xml" value="0.29322916666666665" />
+        <entry key="module-favorites/src/main/res/layout/item_holder.xml" value="0.29322916666666665" />
         <entry key="module-main/src/main/res/layout/activity_main.xml" value="0.19927536231884058" />
         <entry key="module-phonelist/src/main/res/layout/fragment_phone_list.xml" value="0.2658514492753623" />
       </map>

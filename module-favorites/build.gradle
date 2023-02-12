@@ -7,6 +7,7 @@ if (runAsApp.toBoolean()) {
 
 apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'kotlin-kapt'
+apply plugin:'kotlin-android-extensions'
 
 
 android {
@@ -82,6 +83,7 @@ dependencies {
     implementation(libs.ultraviewpager) {
         transitive = true
     }
+
 
     implementation libs.arouter
     kapt libs.arouter_compile

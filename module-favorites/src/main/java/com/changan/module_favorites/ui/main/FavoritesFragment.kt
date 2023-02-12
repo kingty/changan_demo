@@ -1,5 +1,6 @@
 package com.changan.module_favorites.ui.main
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.changan.module_base.service.ServiceProvider
 import com.changan.module_favorites.R
+import com.changan.module_favorites.ui.tangram.TangramActivity
+import kotlinx.android.synthetic.main.fragment_favorites.*
 
 class FavoritesFragment : Fragment() {
 
@@ -29,6 +32,18 @@ class FavoritesFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(FavoritesViewModel::class.java)
         // TODO: Use the ViewModel
+
+
+        demo.setOnClickListener {
+            val intent = Intent(context, TangramActivity::class.java)
+            intent.putExtra("filename", "data.json")
+            startActivity(intent)
+        }
+        demo2.setOnClickListener {
+            val intent = Intent(context, TangramActivity::class.java)
+            intent.putExtra("filename", "data_1.json")
+            startActivity(intent)
+        }
 
     }
 

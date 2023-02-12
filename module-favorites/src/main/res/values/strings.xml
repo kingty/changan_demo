@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">module-favorites</string>
+    <string name="auto_layout_demo">动态布局,模拟网络下发 json-1</string>
+    <string name="auto_layout_demo2">动态布局,模拟网络下发 json-2</string>
 </resources>
