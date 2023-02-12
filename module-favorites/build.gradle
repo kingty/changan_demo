@@ -72,6 +72,17 @@ dependencies {
     implementation libs.livedata
     implementation libs.viewmodel
 
+    implementation libs.tangram
+    implementation(libs.virtualview) {
+        transitive = true
+    }
+    implementation(libs.vlayout) {
+        transitive = true
+    }
+    implementation(libs.ultraviewpager) {
+        transitive = true
+    }
+
     implementation libs.arouter
     kapt libs.arouter_compile
 

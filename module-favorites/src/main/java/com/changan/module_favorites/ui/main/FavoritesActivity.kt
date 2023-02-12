@@ -1,10 +1,10 @@
-package com.changan.module_favorites
+package com.changan.module_favorites.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.changan.module_base.PATH_FAVORITE_ACT
-import com.changan.module_favorites.ui.main.FavoritesFragment
+import com.changan.module_favorites.R
 
 @Route(path = PATH_FAVORITE_ACT)
 class FavoritesActivity : AppCompatActivity() {
