@@ -1,6 +1,7 @@
 package com.changan.module_main.architec.impl
 
 import android.content.Context
+import android.util.Log
 import com.changan.base.core.lifecycle.ActivityEvent
 import com.changan.base.core.lifecycle.LifecycleProvider
 import com.changan.module_main.architec.IPresenter
@@ -24,12 +25,12 @@ abstract class BasePresenter<out V : IViewModel<IPresenter<V>>>(protected var li
         return viewModel!!.context()
     }
 
-    fun initDataOnCreate() {}
-    fun initSubscription() {}
 
     init {
         lifecycleProviderImpl.lifecycle().subscribe {
-            if (it == ActivityEvent.DESTROY) {
+
+            val event = it as ActivityEvent
+            if (event == ActivityEvent.DESTROY) {
                 destroy()
             }
         }

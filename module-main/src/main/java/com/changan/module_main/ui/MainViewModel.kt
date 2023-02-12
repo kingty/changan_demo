@@ -29,24 +29,34 @@ class MainViewModel : IViewModel<MainPresenter> {
     }
 
     var time: TextView? = null
-    override fun inflateView(inflater: LayoutInflater?, parent: ViewGroup?): View? {
-        val view: View =
-            inflater!!.inflate(R.layout.activity_main, parent, false)
+    var to_list: Button? = null
+    var to_favorites: Button? = null
+    var service_get: Button? = null
 
-        val to_list = view.findViewById<Button>(R.id.to_list)
-        val to_favorites = view.findViewById<Button>(R.id.to_favorites)
-        val service_get = view.findViewById<Button>(R.id.service_get)
-        time = view.findViewById<Button>(R.id.time)
-        to_list.setOnClickListener {
+    fun initView() {
+
+        to_list?.setOnClickListener {
             presenter?.toListAct()
         }
-        to_favorites.setOnClickListener {
+        to_favorites?.setOnClickListener {
             presenter?.toFavoriteAct()
         }
 
-        service_get.setOnClickListener {
+        service_get?.setOnClickListener {
             presenter?.getListServiceTime()
         }
+    }
+
+    override fun inflateView(inflater: LayoutInflater?, parent: ViewGroup?): View? {
+        val view: View =
+            inflater!!.inflate(R.layout.activity_main, parent, false)
+        // 生产环境采用脚本分析xml自动生成view
+        // 弃用databinding
+        // 弃用注解生成，影响编译时间
+        to_list = view.findViewById<Button>(R.id.to_list)
+        to_favorites = view.findViewById<Button>(R.id.to_favorites)
+        service_get = view.findViewById<Button>(R.id.service_get)
+        time = view.findViewById<Button>(R.id.time)
         return view
     }
 

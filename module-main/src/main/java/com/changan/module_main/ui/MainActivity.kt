@@ -21,6 +21,7 @@ class MainActivity : Act() {
         presenter.bindViewModel(viewModel)
 
         setContentView(viewModel.inflateView(LayoutInflater.from(this), null))
+        presenter.registerAction()
 
     }
 }

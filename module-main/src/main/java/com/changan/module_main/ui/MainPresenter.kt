@@ -29,4 +29,8 @@ class MainPresenter(lifecycleProviderImpl: LifecycleProvider<*>) : BasePresenter
             viewModel?.setTimeText(it)
         }
     }
+
+    fun registerAction() {
+        viewModel?.initView()
+    }
 }

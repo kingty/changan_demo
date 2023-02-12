@@ -14,11 +14,6 @@ import com.changan.base.core.lifecycle.RxLifecycle
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
-
-/**
- * Created by kingty on 04/05/2018.
- */
-
 open class Frag : androidx.fragment.app.Fragment(), LifecycleProvider<FragmentEvent> {
 
     private val lifecycleSubject = BehaviorSubject.create<FragmentEvent>()
